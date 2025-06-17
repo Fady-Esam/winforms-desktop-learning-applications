@@ -1,0 +1,1911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37F92C65-206C-420A-8B9D-A71CD0D9876D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WFs</RootNamespace>
+    <AssemblyName>WFs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v24.2.UI, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Docs.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.2.Export, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.2.UI, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v24.2.Core, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v24.2.Extensions, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.2, Version=24.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmpFrm.designer.cs">
+      <DependentUpon>AddEmpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSuppliersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSuppliersFrm.designer.cs">
+      <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchSaveBoxesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchSaveBoxesFrm.Designer.cs">
+      <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="branchsUsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="branchsUsersFrm.Designer.cs">
+      <DependentUpon>branchsUsersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsArabicNumberConverter.cs" />
+    <Compile Include="ClsCheckNumber.cs" />
+    <Compile Include="ContractRateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractRateFrm.Designer.cs">
+      <DependentUpon>ContractRateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePenalty.Designer.cs">
+      <DependentUpon>CreatePenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGroupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerGroupFrm.Designer.cs">
+      <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersFrm.Designer.cs">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersInfoFrm.Designer.cs">
+      <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomGroupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomGroupFrm.Designer.cs">
+      <DependentUpon>CustomGroupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass.cs" />
+    <Compile Include="EarningsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EarningsFrm.Designer.cs">
+      <DependentUpon>EarningsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeInfoFrm.Designer.cs">
+      <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeesFrm.Designer.cs">
+      <DependentUpon>EmployeesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBranchStores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBranchStores.Designer.cs">
+      <DependentUpon>FrmBranchStores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneTypeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneTypeFrm.Designer.cs">
+      <DependentUpon>GeneTypeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridDataFrm.Designer.cs">
+      <DependentUpon>GridDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\BarManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\BarManagerFrm.Designer.cs">
+      <DependentUpon>BarManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\BarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\BarUserControl.Designer.cs">
+      <DependentUpon>BarUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Charts.Designer.cs">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\ControlMapFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\ControlMapFrm.Designer.cs">
+      <DependentUpon>ControlMapFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\DockManagerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\DockManagerFrm.Designer.cs">
+      <DependentUpon>DockManagerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\EmployeesDBDataSet.Designer.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\EmployeesDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\GanttControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\GanttControlFrm.Designer.cs">
+      <DependentUpon>GanttControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\HR_DBDataSet.Designer.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\HR_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HR_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\LayoutControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\LayoutControlFrm.Designer.cs">
+      <DependentUpon>LayoutControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\LearnCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\LearnCharts.Designer.cs">
+      <DependentUpon>LearnCharts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\MapControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\MapControl.Designer.cs">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\NavBarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\NavBarFrm.Designer.cs">
+      <DependentUpon>NavBarFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\OutlookAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\OutlookAppointmentForm.Designer.cs">
+      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\PdfViewerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\PdfViewerFrm.Designer.cs">
+      <DependentUpon>PdfViewerFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\PivotContorlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\PivotContorlFrm.Designer.cs">
+      <DependentUpon>PivotContorlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Program.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\ProjectDataBaseDataSet.Designer.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\ProjectDataBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\AddingItems\RibbonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\RibbonForm1.Designer.cs">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\RichEditControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\RichEditControlFrm.Designer.cs">
+      <DependentUpon>RichEditControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\ScheduleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\ScheduleFrm.Designer.cs">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\SpreedSheetFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\SpreedSheetFrm.Designer.cs">
+      <DependentUpon>SpreedSheetFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TabControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TabControlFrm.Designer.cs">
+      <DependentUpon>TabControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TileControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TileControlFrm.Designer.cs">
+      <DependentUpon>TileControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TreeListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\TreeListFrm.Designer.cs">
+      <DependentUpon>TreeListFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\WizardControlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\WizardControlFrm.Designer.cs">
+      <DependentUpon>WizardControlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\AddingItems\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\arrs\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.GlobalUsings.g.cs" />
+    <Compile Include="DevExpressLevel1\arrs\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\arrs\obj\Release\net8.0\arrs.AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\arrs\obj\Release\net8.0\arrs.GlobalUsings.g.cs" />
+    <Compile Include="DevExpressLevel1\arrs\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\EasyTest\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\WinModule.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\WinModule.Designer.cs">
+      <DependentUpon>WinModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\DatabaseUpdate\Updater.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Module.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\EasyTest\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\EasyTest\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\WinApplication.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\WinApplication.Designer.cs">
+      <DependentUpon>WinApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\XafSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\XafSplashScreen.Designer.cs">
+      <DependentUpon>XafSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Learn1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Learn1.Designer.cs">
+      <DependentUpon>Learn1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\L1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\L1.Designer.cs">
+      <DependentUpon>L1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\L2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\L2.Designer.cs">
+      <DependentUpon>L2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\PersistentClass1.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\RibbonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\RibbonFrm.Designer.cs">
+      <DependentUpon>RibbonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\RichTexts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\RichTexts.Designer.cs">
+      <DependentUpon>RichTexts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm.Designer.cs">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Program.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\TestDev\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\TestDev\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\Program.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\TestDev\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\EmployeesDBDataSet.Designer.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\EmployeesDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Program.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpressLevel1\TestSpreedSheet\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\ContsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\ContsFrm.Designer.cs">
+      <DependentUpon>ContsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmControls.Designer.cs">
+      <DependentUpon>FrmControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmCos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmCos.Designer.cs">
+      <DependentUpon>FrmCos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmShowControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\FrmShowControls.Designer.cs">
+      <DependentUpon>FrmShowControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\GridLookUpEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\GridLookUpEdit.Designer.cs">
+      <DependentUpon>GridLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\Program.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\Lesson1\RangeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\RangeFrm.Designer.cs">
+      <DependentUpon>RangeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\TimeEditFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\TimeEditFrm.Designer.cs">
+      <DependentUpon>TimeEditFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\Lesson1\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\obj\Release\net8.0\pro2.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\obj\Release\net8.0\pro2.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\pro2\Program.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\Prob1.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\Prob1.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\Prob1\Program.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\ClsNumberCheck.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\dataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\resGUI\dataFrm.Designer.cs">
+      <DependentUpon>dataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\resGUI\DBClass.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\ExtractsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\resGUI\ExtractsFrm.Designer.cs">
+      <DependentUpon>ExtractsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\resGUI\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\Program.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\resGUI\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Release\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Release\net8.0\results.AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\results\obj\Release\net8.0\results.GlobalUsings.g.cs" />
+    <Compile Include="DevExpreessLevel2\results\Program.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\ClsNumberCheck.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\DBClass.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\ExtractRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TaskProject\ExtractRpt.Designer.cs">
+      <DependentUpon>ExtractRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TaskProject\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\Program.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\TaskProject\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TaskProject\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\testDev\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\testDev\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\testDev\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\Program.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\Properties\Settings.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\testDev\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\testDev\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TT\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TT\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevExpreessLevel2\TT\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\TT\obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="DevExpreessLevel2\TT\Program.cs" />
+    <Compile Include="DevExpreessLevel2\TT\Properties\AssemblyInfo.cs" />
+    <Compile Include="DevExpreessLevel2\TT\Properties\Resources.Designer.cs" />
+    <Compile Include="DevExpreessLevel2\TT\Properties\Settings.Designer.cs" />
+    <Compile Include="ModifiedSalesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifiedSalesFrm.Designer.cs">
+      <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfferFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferFrm2.Designer.cs">
+      <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PenaltyWindowViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PenaltyWindowViewer.Designer.cs">
+      <DependentUpon>PenaltyWindowViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintSalaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSalaries.Designer.cs">
+      <DependentUpon>PrintSalaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptModifiedSales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptModifiedSales.Designer.cs">
+      <DependentUpon>rptModifiedSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalariesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalariesFrm.Designer.cs">
+      <DependentUpon>SalariesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleFrm.Designer.cs">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxesRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxesRules.Designer.cs">
+      <DependentUpon>TaxesRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationRules.Designer.cs">
+      <DependentUpon>VacationRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationTypeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationTypeFrm.Designer.cs">
+      <DependentUpon>VacationTypeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationViewer.Designer.cs">
+      <DependentUpon>VacationViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZoomFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoomFrm.Designer.cs">
+      <DependentUpon>ZoomFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmpFrm.resx">
+      <DependentUpon>AddEmpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSuppliersFrm.resx">
+      <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchSaveBoxesFrm.resx">
+      <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="branchsUsersFrm.resx">
+      <DependentUpon>branchsUsersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractRateFrm.resx">
+      <DependentUpon>ContractRateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatePenalty.resx">
+      <DependentUpon>CreatePenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerGroupFrm.resx">
+      <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersFrm.resx">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersInfoFrm.resx">
+      <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomGroupFrm.resx">
+      <DependentUpon>CustomGroupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EarningsFrm.resx">
+      <DependentUpon>EarningsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInfoFrm.resx">
+      <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesFrm.resx">
+      <DependentUpon>EmployeesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBranchStores.resx">
+      <DependentUpon>FrmBranchStores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneTypeFrm.resx">
+      <DependentUpon>GeneTypeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridDataFrm.resx">
+      <DependentUpon>GridDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\BarManagerFrm.resx">
+      <DependentUpon>BarManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\BarUserControl.resx">
+      <DependentUpon>BarUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\Charts.resx">
+      <DependentUpon>Charts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\ControlMapFrm.resx">
+      <DependentUpon>ControlMapFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\DockManagerFrm.resx">
+      <DependentUpon>DockManagerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\GanttControlFrm.resx">
+      <DependentUpon>GanttControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\LayoutControlFrm.resx">
+      <DependentUpon>LayoutControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\LearnCharts.resx">
+      <DependentUpon>LearnCharts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\MapControl.resx">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\NavBarFrm.resx">
+      <DependentUpon>NavBarFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.BarManagerFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.BarUserControl.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.Charts.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.ControlMapFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.DockManagerFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.Form1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.GanttControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.LayoutControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.LearnCharts.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.MapControl.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.NavBarFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.OutlookAppointmentForm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.PdfViewerFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.PivotContorlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.RibbonForm1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.RichEditControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.ScheduleFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.SpreedSheetFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.TabControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.TileControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.TreeListFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.WizardControlFrm.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.XtraReport1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\OutlookAppointmentForm.resx">
+      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\PdfViewerFrm.resx">
+      <DependentUpon>PdfViewerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\PivotContorlFrm.resx">
+      <DependentUpon>PivotContorlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\RibbonForm1.resx">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\RichEditControlFrm.resx">
+      <DependentUpon>RichEditControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\ScheduleFrm.resx">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\SpreedSheetFrm.resx">
+      <DependentUpon>SpreedSheetFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\TabControlFrm.resx">
+      <DependentUpon>TabControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\TileControlFrm.resx">
+      <DependentUpon>TileControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\TreeListFrm.resx">
+      <DependentUpon>TreeListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\WizardControlFrm.resx">
+      <DependentUpon>WizardControlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\AddingItems\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\XafSplashScreen.resx">
+      <DependentUpon>XafSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Form1.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Learn1.resx">
+      <DependentUpon>Learn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.Learn1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\L1.resx">
+      <DependentUpon>L1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\L2.resx">
+      <DependentUpon>L2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.L1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.RibbonForm1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\RibbonFrm.resx">
+      <DependentUpon>RibbonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\RichTexts.resx">
+      <DependentUpon>RichTexts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm.resx">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.Form1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\sheetFrm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.Form1.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\TestDev\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\TestDev\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\TestDev\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpressLevel1\TestSpreedSheet\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpressLevel1\TestSpreedSheet\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpressLevel1\TestSpreedSheet\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\ContsFrm.resx">
+      <DependentUpon>ContsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\FrmControls.resx">
+      <DependentUpon>FrmControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\FrmCos.resx">
+      <DependentUpon>FrmCos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\FrmShowControls.resx">
+      <DependentUpon>FrmShowControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\GridLookUpEdit.resx">
+      <DependentUpon>GridLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.ContsFrm.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.FrmControls.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.FrmCos.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.FrmShowControls.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.GridLookUpEdit.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.RangeFrm.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.TimeEditFrm.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.XtraForm1.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\RangeFrm.resx">
+      <DependentUpon>RangeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\TimeEditFrm.resx">
+      <DependentUpon>TimeEditFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\Lesson1\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\dataFrm.resx">
+      <DependentUpon>dataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\ExtractsFrm.resx">
+      <DependentUpon>ExtractsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\Form1.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.dataFrm.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.ExtractsFrm.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpreessLevel2\resGUI\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\ExtractRpt.resx">
+      <DependentUpon>ExtractRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.ExtractRpt.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.XtraForm1.resources" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\Properties\licenses.licx" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\TaskProject\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevExpreessLevel2\testDev\Properties\Resources.resx" />
+    <EmbeddedResource Include="DevExpreessLevel2\TT\Properties\Resources.resx" />
+    <EmbeddedResource Include="ModifiedSalesFrm.resx">
+      <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferFrm2.resx">
+      <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PenaltyWindowViewer.resx">
+      <DependentUpon>PenaltyWindowViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSalaries.resx">
+      <DependentUpon>PrintSalaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptModifiedSales.resx">
+      <DependentUpon>rptModifiedSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalariesFrm.resx">
+      <DependentUpon>SalariesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleFrm.resx">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxesRules.resx">
+      <DependentUpon>TaxesRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacationRules.resx">
+      <DependentUpon>VacationRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacationTypeFrm.resx">
+      <DependentUpon>VacationTypeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacationViewer.resx">
+      <DependentUpon>VacationViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoomFrm.resx">
+      <DependentUpon>ZoomFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DevExpressLevel1\.vs\AddingItems\FileContentIndex\fe45f413-8392-4af5-b200-a831b09f1c8e.vsidx" />
+    <None Include="DevExpressLevel1\.vs\AddingItems\v17\.suo" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\561f5991-1831-456a-87ca-c07544c1b684.vsidx" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\5a4880d3-6aa9-4be6-815b-164ceb28940d.vsidx" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\75f66aff-ee39-4c99-8ab4-4395ac794b07.vsidx" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\ce47a7d3-88d8-49ed-b20d-6262c08a0c64.vsidx" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\d2c7f22e-aec0-489f-9b54-f250d764a5fe.vsidx" />
+    <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\v17\.suo" />
+    <None Include="DevExpressLevel1\AddingItems\AddingItems.csproj" />
+    <None Include="DevExpressLevel1\AddingItems\App.config" />
+    <None Include="DevExpressLevel1\AddingItems\bin\Debug\AddingItems.exe.config" />
+    <None Include="DevExpressLevel1\AddingItems\EmployeesDBDataSet.xsc">
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\EmployeesDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeesDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\EmployeesDBDataSet.xss">
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\HR_DBDataSet.xsc">
+      <DependentUpon>HR_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\HR_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HR_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\HR_DBDataSet.xss">
+      <DependentUpon>HR_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.csproj.CopyComplete" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.csproj.GenerateResource.cache" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\AddingItems\obj\Release\AddingItems.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\AddingItems\ProjectDataBaseDataSet.xsc">
+      <DependentUpon>ProjectDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\ProjectDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDataBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\ProjectDataBaseDataSet.xss">
+      <DependentUpon>ProjectDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\AddingItems\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\arrs\arrs.csproj" />
+    <None Include="DevExpressLevel1\arrs\bin\Debug\net8.0\arrs.deps.json" />
+    <None Include="DevExpressLevel1\arrs\bin\Debug\net8.0\arrs.runtimeconfig.json" />
+    <None Include="DevExpressLevel1\arrs\obj\arrs.csproj.nuget.dgspec.json" />
+    <None Include="DevExpressLevel1\arrs\obj\arrs.csproj.nuget.g.props" />
+    <None Include="DevExpressLevel1\arrs\obj\arrs.csproj.nuget.g.targets" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.AssemblyInfoInputs.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.assets.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.csproj.BuildWithSkipAnalyzers" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.genruntimeconfig.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\project.assets.json" />
+    <None Include="DevExpressLevel1\arrs\obj\project.nuget.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\Release\net8.0\arrs.AssemblyInfoInputs.cache" />
+    <None Include="DevExpressLevel1\arrs\obj\Release\net8.0\arrs.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\FileContentIndex\2867b4cc-e51c-469b-95ac-7a0cf501e61d.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\FileContentIndex\a9f661f7-d49d-4d01-95c6-34fae646b35a.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\FileContentIndex\b0b2b00c-effb-433e-b5a0-7ae76da7cc95.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\FileContentIndex\bfd81e4f-4577-4da2-b4f5-741225e738dd.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\FileContentIndex\f29421de-4a29-4a64-bd8f-ceca7075eca1.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1Frm\.vs\Lesson1Frm\v17\.suo" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\.vs\DXApplication1.Module.Win.csproj.dtbcache.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\DXApplication1.Module.Win.csproj" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Model.DesignedDiffs.xafml" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Debug\DXApplication1.Module.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\DXApplication1.Module.Win.csproj.nuget.dgspec.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\DXApplication1.Module.Win.csproj.nuget.g.props" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\DXApplication1.Module.Win.csproj.nuget.g.targets" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\EasyTest\DXApplication1.Module.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\project.assets.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\project.nuget.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Release\DXApplication1.Module.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\.vs\DXApplication1.Module.csproj.dtbcache.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\DXApplication1.Module.csproj" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Model.DesignedDiffs.xafml" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Debug\DXApplication1.Module.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\DXApplication1.Module.csproj.nuget.dgspec.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\DXApplication1.Module.csproj.nuget.g.props" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\DXApplication1.Module.csproj.nuget.g.targets" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\EasyTest\DXApplication1.Module.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\project.assets.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\project.nuget.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Release\DXApplication1.Module.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\.vs\DXApplication1.Win.csproj.dtbcache.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\App.config" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\DXApplication1.Win.csproj" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\Model.xafml" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Debug\DXApplication1.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\DXApplication1.Win.csproj.nuget.dgspec.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\DXApplication1.Win.csproj.nuget.g.props" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\DXApplication1.Win.csproj.nuget.g.targets" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\EasyTest\DXApplication1.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\project.assets.json" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\project.nuget.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Release\DXApplication1.Win.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\App.config" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\Lesson1Frm.exe.config" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Lesson1Frm.csproj" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.csproj.CopyComplete" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.csproj.GenerateResource.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Release\Lesson1Frm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1.csproj.dtbcache.json" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1\FileContentIndex\39de429b-7c1f-48c6-9756-e01e6fe9f8e4.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1\FileContentIndex\7352853f-7918-4be2-ab17-81f23912c3f2.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1\FileContentIndex\f3357665-b21b-4148-b299-5c85ba1aaebd.vsidx" />
+    <None Include="DevExpressLevel1\Lesson1\.vs\Lesson1\v17\.suo" />
+    <None Include="DevExpressLevel1\Lesson1\App.config" />
+    <None Include="DevExpressLevel1\Lesson1\bin\Debug\Lesson1.exe.config" />
+    <None Include="DevExpressLevel1\Lesson1\Lesson1.csproj" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.csproj.CopyComplete" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.csproj.GenerateResource.cache" />
+    <None Include="DevExpressLevel1\Lesson1\obj\Release\Lesson1.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\App.config" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\ScheduleFrm.exe.config" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.csproj.CopyComplete" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.csproj.GenerateResource.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\WordFrm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Release\WordFrm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\Lesson1\ScheduleFrm\WordFrm.csproj" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\App.config" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\sheetFrm.exe.config" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.csproj.CopyComplete" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.csproj.GenerateResource.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Release\sheetFrm.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\Lesson1\sheetFrm\sheetFrm.csproj" />
+    <None Include="DevExpressLevel1\TestDev\App.config" />
+    <None Include="DevExpressLevel1\TestDev\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\TestDev\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\TestDev\obj\Debug\TestDev.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\TestDev\obj\Release\TestDev.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\TestDev\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\TestDev\TestDev.csproj" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\App.config" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\EmployeesDBDataSet.xsc">
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\TestSpreedSheet\EmployeesDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeesDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DevExpressLevel1\TestSpreedSheet\EmployeesDBDataSet.xss">
+      <DependentUpon>EmployeesDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\TestSpreedSheet.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\obj\Release\TestSpreedSheet.csproj.AssemblyReference.cache" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\Properties\Settings.settings" />
+    <None Include="DevExpressLevel1\TestSpreedSheet\TestSpreedSheet.csproj" />
+    <None Include="DevExpreessLevel2\.vs\LearnDevExpress2\FileContentIndex\merges\01349f38-62db-4398-b089-a4fa69dedf66.vsidx" />
+    <None Include="DevExpreessLevel2\.vs\LearnDevExpress2\v17\.wsuo" />
+    <None Include="DevExpreessLevel2\.vs\slnx.sqlite" />
+    <None Include="DevExpreessLevel2\.vs\VSWorkspaceState.json" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1.csproj.dtbcache.json" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\FileContentIndex\20212b51-fb0b-42c6-895f-4732aafe44ed.vsidx" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\FileContentIndex\4c16fdc6-d77b-446e-bfd7-2eb3c7e3b806.vsidx" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\FileContentIndex\8f421023-667d-4020-80c2-53b88dd83ae7.vsidx" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\FileContentIndex\a9826a33-a5d1-4344-8be5-6c3af7df2e1b.vsidx" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\FileContentIndex\b1ff266e-e380-42c3-9733-a8779603ca40.vsidx" />
+    <None Include="DevExpreessLevel2\Lesson1\.vs\Lesson1\v17\.suo" />
+    <None Include="DevExpreessLevel2\Lesson1\App.config" />
+    <None Include="DevExpreessLevel2\Lesson1\Lesson1.csproj" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.csproj.GenerateResource.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\obj\Release\Lesson1.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\Lesson1\Properties\Settings.settings" />
+    <None Include="DevExpreessLevel2\pro2\bin\Debug\net8.0\pro2.deps.json" />
+    <None Include="DevExpreessLevel2\pro2\bin\Debug\net8.0\pro2.runtimeconfig.json" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.assets.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.csproj.BuildWithSkipAnalyzers" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.genruntimeconfig.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\pro2.csproj.nuget.dgspec.json" />
+    <None Include="DevExpreessLevel2\pro2\obj\pro2.csproj.nuget.g.props" />
+    <None Include="DevExpreessLevel2\pro2\obj\pro2.csproj.nuget.g.targets" />
+    <None Include="DevExpreessLevel2\pro2\obj\project.assets.json" />
+    <None Include="DevExpreessLevel2\pro2\obj\project.nuget.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\Release\net8.0\pro2.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\pro2\obj\Release\net8.0\pro2.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\pro2\pro2.csproj" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\Prob1\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\Prob1\FileContentIndex\1035d683-a359-425c-8770-2a75a35aac17.vsidx" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\Prob1\FileContentIndex\6cc259fd-9301-40b5-8ee5-2ca7fa1604ca.vsidx" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\Prob1\v17\.futdcache.v2" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\Prob1\v17\.suo" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\ProjectEvaluation\prob1.metadata.v7.bin" />
+    <None Include="DevExpreessLevel2\Prob1\.vs\ProjectEvaluation\prob1.projects.v7.bin" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.assets.cache" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.csproj.BuildWithSkipAnalyzers" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Prob1.csproj.nuget.dgspec.json" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Prob1.csproj.nuget.g.props" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Prob1.csproj.nuget.g.targets" />
+    <None Include="DevExpreessLevel2\Prob1\obj\project.assets.json" />
+    <None Include="DevExpreessLevel2\Prob1\obj\project.nuget.cache" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\Prob1.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\Prob1.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\Prob1\Prob1.csproj" />
+    <None Include="DevExpreessLevel2\resGUI\.vs\resGUI\FileContentIndex\ccdee30f-aa1c-4215-bac9-0277f76b85c0.vsidx" />
+    <None Include="DevExpreessLevel2\resGUI\App.config" />
+    <None Include="DevExpreessLevel2\resGUI\bin\Debug\resGUI.exe.config" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.csproj.CopyComplete" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.csproj.GenerateResource.cache" />
+    <None Include="DevExpreessLevel2\resGUI\obj\Release\resGUI.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\resGUI\Properties\Settings.settings" />
+    <None Include="DevExpreessLevel2\resGUI\resGUI.csproj" />
+    <None Include="DevExpreessLevel2\results\bin\Debug\net8.0\results.deps.json" />
+    <None Include="DevExpreessLevel2\results\bin\Debug\net8.0\results.runtimeconfig.json" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.assets.cache" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.csproj.BuildWithSkipAnalyzers" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.csproj.CoreCompileInputs.cache" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.genruntimeconfig.cache" />
+    <None Include="DevExpreessLevel2\results\obj\project.assets.json" />
+    <None Include="DevExpreessLevel2\results\obj\project.nuget.cache" />
+    <None Include="DevExpreessLevel2\results\obj\Release\net8.0\results.AssemblyInfoInputs.cache" />
+    <None Include="DevExpreessLevel2\results\obj\Release\net8.0\results.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="DevExpreessLevel2\results\obj\results.csproj.nuget.dgspec.json" />
+    <None Include="DevExpreessLevel2\results\obj\results.csproj.nuget.g.props" />
+    <None Include="DevExpreessLevel2\results\obj\results.csproj.nuget.g.targets" />
+    <None Include="DevExpreessLevel2\results\results.csproj" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\ProjectEvaluation\taskproject.metadata.v7.bin" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\ProjectEvaluation\taskproject.projects.v7.bin" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\21c88d56-1537-410c-a42c-58e9d6c5c9b7.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\33541922-71c7-49ba-913c-5dce615a4464.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\526cd398-aed1-4415-bb79-caae2a36e960.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\7e13d18f-be11-4574-8a05-d23e171b672a.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\9af8cdff-5b4a-46df-a43f-f29f3d831274.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\a224e0b1-9f62-4dca-9d08-1e428bf15403.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\FileContentIndex\f29da0d6-c8c7-4571-a0c3-529390b68d3b.vsidx" />
+    <None Include="DevExpreessLevel2\TaskProject\.vs\TaskProject\v17\.suo" />
+    <None Include="DevExpreessLevel2\TaskProject\App.config" />
+    <None Include="DevExpreessLevel2\TaskProject\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpreessLevel2\TaskProject\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.csproj.GenerateResource.cache" />
+    <None Include="DevExpreessLevel2\TaskProject\obj\Release\TaskProject.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\TaskProject\packages.config" />
+    <None Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\.signature.p7s" />
+    <None Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\DevExpress.Data.24.1.4.nupkg" />
+    <None Include="DevExpreessLevel2\TaskProject\Properties\Settings.settings" />
+    <None Include="DevExpreessLevel2\TaskProject\TaskProject.csproj" />
+    <None Include="DevExpreessLevel2\testDev\.vs\testDev\FileContentIndex\9ba4929a-847c-40e6-bf0f-95ebb48620f9.vsidx" />
+    <None Include="DevExpreessLevel2\testDev\.vs\testDev\v17\.suo" />
+    <None Include="DevExpreessLevel2\testDev\App.config" />
+    <None Include="DevExpreessLevel2\testDev\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpreessLevel2\testDev\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpreessLevel2\testDev\obj\Debug\testDev.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\testDev\obj\Release\testDev.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\testDev\Properties\Settings.settings" />
+    <None Include="DevExpreessLevel2\testDev\testDev.csproj" />
+    <None Include="DevExpreessLevel2\TT\.vs\TT\FileContentIndex\23987075-7142-4b36-bcc9-8c90e36d495c.vsidx" />
+    <None Include="DevExpreessLevel2\TT\.vs\TT\FileContentIndex\43b54f25-7822-4625-b1d8-da31b7197caf.vsidx" />
+    <None Include="DevExpreessLevel2\TT\.vs\TT\v17\.suo" />
+    <None Include="DevExpreessLevel2\TT\App.config" />
+    <None Include="DevExpreessLevel2\TT\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DevExpreessLevel2\TT\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DevExpreessLevel2\TT\obj\Debug\TT.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\TT\obj\Release\TT.csproj.AssemblyReference.cache" />
+    <None Include="DevExpreessLevel2\TT\Properties\Settings.settings" />
+    <None Include="DevExpreessLevel2\TT\TT.csproj" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="DevExpressLevel1\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpressLevel1\AddingItems.sln" />
+    <Content Include="DevExpressLevel1\AddingItems\.cr\personal\Editor\Debug Visualizer.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\AddingItems.exe" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\AddingItems.pdb" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.BonusSkins.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Charts.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Charts.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.CodeParser.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.DataAccess.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.DataAccess.v24.1.UI.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.DataAccess.v24.1.UI.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.DataAccess.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.DataVisualization.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Diagram.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Diagram.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Images.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Map.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Map.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.PivotGrid.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.PivotGrid.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.RichEdit.v24.1.Export.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.SpellChecker.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.SpellChecker.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Spreadsheet.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Spreadsheet.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.TreeMap.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.TreeMap.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Utils.v24.1.UI.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Utils.v24.1.UI.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Xpo.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.Xpo.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.Extensions.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.UI.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.UI.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.Wizard.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.Wizard.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraCharts.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraDiagram.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraDiagram.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGantt.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGantt.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGauges.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGauges.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraMap.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraMap.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraNavBar.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraNavBar.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPdfViewer.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPdfViewer.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPivotGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPivotGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraReports.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraReports.v24.1.Extensions.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraReports.v24.1.Extensions.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraReports.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraRichEdit.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraRichEdit.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.Desktop.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.Desktop.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Extensions.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.Extensions.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraScheduler.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraSpellChecker.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraSpellChecker.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraSpreadsheet.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraSpreadsheet.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraTreeMap.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraTreeMap.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraWizard.v24.1.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\bin\Debug\DevExpress.XtraWizard.v24.1.xml" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.exe" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\addingitems.exe.licenses" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\AddingItems.pdb" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\TempPE\EmployeesDBDataSet.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\TempPE\HR_DBDataSet.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\TempPE\HR_DBDataSet1.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\AddingItems\obj\Debug\TempPE\ProjectDataBaseDataSet.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\arrs\bin\Debug\net8.0\arrs.dll" />
+    <Content Include="DevExpressLevel1\arrs\bin\Debug\net8.0\arrs.exe" />
+    <Content Include="DevExpressLevel1\arrs\bin\Debug\net8.0\arrs.pdb" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\apphost.exe" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.dll" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\arrs.pdb" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\refint\arrs.dll" />
+    <Content Include="DevExpressLevel1\arrs\obj\Debug\net8.0\ref\arrs.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Controllers\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Editors\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Images\ExpressAppLogo.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\Images\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\BusinessObjects\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Controllers\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\DatabaseUpdate\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Images\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\Welcome.html" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\ExpressApp.ico" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\Images\Logo.svg" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\Images\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\ReadMe.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm.sln" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.BonusSkins.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Images.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.SpellChecker.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.SpellChecker.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraNavBar.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraNavBar.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.Desktop.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.Desktop.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Extensions.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.Extensions.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraScheduler.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraSpellChecker.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraSpellChecker.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\Lesson1Frm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Debug\Lesson1Frm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Calendar_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Drafts_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Inbox_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Mail_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Organizer_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Outbox_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Bold_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Close_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Close_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Content_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Content_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Exit_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Exit_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Find_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Find_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Info_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Info_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Italic_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_New_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_New_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Open_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Open_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Save_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Save_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Ribbon_Underline_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Tasks_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\Images\Trash_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\lesson1frm.exe.licenses" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\Lesson1Frm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\Lesson1.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\bin\Debug\Lesson1.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\Lesson1.sln" />
+    <Content Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\obj\Debug\lesson1.exe.licenses" />
+    <Content Include="DevExpressLevel1\Lesson1\obj\Debug\Lesson1.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.BonusSkins.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Images.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.SpellChecker.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.SpellChecker.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraRichEdit.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraRichEdit.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraSpellChecker.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraSpellChecker.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\ScheduleFrm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Debug\ScheduleFrm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Bold_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Close_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Close_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Content_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Content_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Exit_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Exit_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Find_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Find_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Info_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Info_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Italic_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_New_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_New_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Open_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Open_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Save_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Save_32x32.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\Images\Ribbon_Underline_16x16.png" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\schedulefrm.exe.licenses" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\ScheduleFrm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\ScheduleFrm\WordFrm.csproj.user" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.BonusSkins.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Charts.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Charts.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.CodeParser.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.DataAccess.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.DataAccess.v24.1.UI.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.DataAccess.v24.1.UI.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.DataAccess.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.DataVisualization.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Diagram.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Diagram.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Images.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Spreadsheet.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Spreadsheet.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.TreeMap.v24.1.Core.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.TreeMap.v24.1.Core.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Utils.v24.1.UI.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Utils.v24.1.UI.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Xpo.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.Xpo.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraCharts.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraCharts.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraDiagram.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraDiagram.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraNavBar.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraNavBar.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraRichEdit.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraRichEdit.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraSpreadsheet.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraSpreadsheet.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraTreeMap.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraTreeMap.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.xml" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\sheetFrm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Debug\sheetFrm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.exe" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetfrm.exe.licenses" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\sheetFrm.pdb" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\Lesson1\sheetFrm\sheetFrm.csproj.user" />
+    <Content Include="DevExpressLevel1\TestDev\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\TestDev\TestDev.csproj.user" />
+    <Content Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\TempPE\EmployeesDBDataSet.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\TestSpreedSheet\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DevExpressLevel1\TestSpreedSheet\TestSpreedSheet.csproj.user" />
+    <Content Include="DevExpreessLevel2\Lesson1\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpreessLevel2\Lesson1\Lesson1.sln" />
+    <Content Include="DevExpreessLevel2\Lesson1\obj\Debug\Lesson1.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\Lesson1\obj\Debug\lesson1.exe.licenses" />
+    <Content Include="DevExpreessLevel2\Lesson1\obj\Debug\TempPE\HR_DBDataSet.Designer.cs.dll" />
+    <Content Include="DevExpreessLevel2\pro2\bin\Debug\net8.0\pro2.dll" />
+    <Content Include="DevExpreessLevel2\pro2\bin\Debug\net8.0\pro2.exe" />
+    <Content Include="DevExpreessLevel2\pro2\bin\Debug\net8.0\pro2.pdb" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\apphost.exe" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.dll" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\pro2.pdb" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\refint\pro2.dll" />
+    <Content Include="DevExpreessLevel2\pro2\obj\Debug\net8.0\ref\pro2.dll" />
+    <Content Include="DevExpreessLevel2\Prob1\bin\Debug\net8.0\Prob1.exe" />
+    <Content Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\apphost.exe" />
+    <Content Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.dll" />
+    <Content Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\Prob1.pdb" />
+    <Content Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\refint\Prob1.dll" />
+    <Content Include="DevExpreessLevel2\Prob1\Prob1.sln" />
+    <Content Include="DevExpreessLevel2\resGUI\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Drawing.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Drawing.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Office.v24.1.Core.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Office.v24.1.Core.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Printing.v24.1.Core.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Printing.v24.1.Core.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.RichEdit.v24.1.Core.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.RichEdit.v24.1.Core.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Utils.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.Utils.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraBars.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraBars.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraEditors.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraEditors.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraGrid.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraGrid.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraLayout.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraLayout.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraPrinting.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraPrinting.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraTreeList.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\DevExpress.XtraTreeList.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\resGUI.exe" />
+    <Content Include="DevExpreessLevel2\resGUI\bin\Debug\resGUI.pdb" />
+    <Content Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.exe" />
+    <Content Include="DevExpreessLevel2\resGUI\obj\Debug\resgui.exe.licenses" />
+    <Content Include="DevExpreessLevel2\resGUI\obj\Debug\resGUI.pdb" />
+    <Content Include="DevExpreessLevel2\results\bin\Debug\net8.0\results.dll" />
+    <Content Include="DevExpreessLevel2\results\bin\Debug\net8.0\results.exe" />
+    <Content Include="DevExpreessLevel2\results\bin\Debug\net8.0\results.pdb" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\apphost.exe" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\refint\results.dll" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\ref\results.dll" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.dll" />
+    <Content Include="DevExpreessLevel2\results\obj\Debug\net8.0\results.pdb" />
+    <Content Include="DevExpreessLevel2\TaskProject\.cr\personal\FavoritesList\List.xml" />
+    <Content Include="DevExpreessLevel2\TaskProject\obj\Debug\TaskProject.csproj.FileListAbsolute.txt" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\analyzers\dotnet\cs\DevExpress.Generator.dll" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\lib\net452\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\lib\net452\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\lib\net6.0\DevExpress.Data.v24.1.dll" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\lib\net6.0\DevExpress.Data.v24.1.xml" />
+    <Content Include="DevExpreessLevel2\TaskProject\packages\DevExpress.Data.24.1.4\tools\VisualStudioToolsManifest.xml" />
+    <Content Include="DevExpreessLevel2\TaskProject\TaskProject.csproj.user" />
+    <Content Include="DevExpreessLevel2\TaskProject\TaskProject.sln" />
+    <Content Include="DevExpreessLevel2\testDev\testDev.sln" />
+    <Content Include="DevExpreessLevel2\TT\TT.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DevExpreessLevel2\Lesson1\bin\Debug\" />
+    <Folder Include="DevExpreessLevel2\Lesson1\bin\Release\" />
+    <Folder Include="DevExpreessLevel2\pro2\bin\Release\net8.0\" />
+    <Folder Include="DevExpreessLevel2\pro2\obj\Release\net8.0\refint\" />
+    <Folder Include="DevExpreessLevel2\pro2\obj\Release\net8.0\ref\" />
+    <Folder Include="DevExpreessLevel2\Prob1\bin\Release\net8.0\" />
+    <Folder Include="DevExpreessLevel2\Prob1\obj\Debug\net8.0\ref\" />
+    <Folder Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\refint\" />
+    <Folder Include="DevExpreessLevel2\Prob1\obj\Release\net8.0\ref\" />
+    <Folder Include="DevExpreessLevel2\resGUI\.vs\resGUI\v17\" />
+    <Folder Include="DevExpreessLevel2\resGUI\bin\Release\" />
+    <Folder Include="DevExpreessLevel2\resGUI\obj\Debug\TempPE\" />
+    <Folder Include="DevExpreessLevel2\results\bin\Release\net8.0\" />
+    <Folder Include="DevExpreessLevel2\results\obj\Release\net8.0\refint\" />
+    <Folder Include="DevExpreessLevel2\results\obj\Release\net8.0\ref\" />
+    <Folder Include="DevExpreessLevel2\TaskProject\bin\Debug\" />
+    <Folder Include="DevExpreessLevel2\TaskProject\bin\Release\" />
+    <Folder Include="DevExpreessLevel2\TaskProject\obj\Debug\TempPE\" />
+    <Folder Include="DevExpreessLevel2\testDev\bin\Debug\" />
+    <Folder Include="DevExpreessLevel2\testDev\bin\Release\" />
+    <Folder Include="DevExpreessLevel2\testDev\obj\Debug\TempPE\" />
+    <Folder Include="DevExpreessLevel2\TT\bin\Debug\" />
+    <Folder Include="DevExpreessLevel2\TT\bin\Release\" />
+    <Folder Include="DevExpreessLevel2\TT\obj\Debug\TempPE\" />
+    <Folder Include="DevExpressLevel1\AddingItems\bin\Release\" />
+    <Folder Include="DevExpressLevel1\arrs\bin\Release\net8.0\" />
+    <Folder Include="DevExpressLevel1\arrs\obj\Release\net8.0\refint\" />
+    <Folder Include="DevExpressLevel1\arrs\obj\Release\net8.0\ref\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\bin\Debug\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\bin\EasyTest\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module.Win\obj\Debug\TempPE\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\bin\Debug\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\bin\EasyTest\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Module\obj\Debug\TempPE\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\bin\Debug\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\bin\EasyTest\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\DXApplication1.Win\obj\Debug\TempPE\" />
+    <Folder Include="DevExpressLevel1\Lesson1Frm\Lesson1Frm\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1\obj\Debug\TempPE\" />
+    <Folder Include="DevExpressLevel1\Lesson1\ScheduleFrm\bin\Release\" />
+    <Folder Include="DevExpressLevel1\Lesson1\sheetFrm\bin\Release\" />
+    <Folder Include="DevExpressLevel1\TestDev\bin\Debug\" />
+    <Folder Include="DevExpressLevel1\TestDev\bin\Release\" />
+    <Folder Include="DevExpressLevel1\TestSpreedSheet\bin\Debug\" />
+    <Folder Include="DevExpressLevel1\TestSpreedSheet\bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
