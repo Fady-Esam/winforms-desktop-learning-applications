@@ -119,11 +119,11 @@ namespace WFs
 
         private void printBtn_Click(object sender, EventArgs e)
         {
-            var report = new rptEarnings();
-            report.DataSource = gridControl1.DataSource;
-            report.CreateDocument();
-            var printTool = new ReportPrintTool(report);
-            printTool.ShowPreviewDialog();
+            //var report = new rptEarnings();
+            //report.DataSource = gridControl1.DataSource;
+            //report.CreateDocument();
+            //var printTool = new ReportPrintTool(report);
+            //printTool.ShowPreviewDialog();
         }
         private void GetData()
         {

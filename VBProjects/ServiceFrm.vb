@@ -1,24 +1,22 @@
 ﻿Imports DevExpress.XtraEditors.Controls
-Imports ServiceApp.DBClass
 
 Public Class ServiceFrm
-    Private DBObj As DBCls = New DBCls()
-
+    Private DBObj As DBHelper = New DBHelper()
     Private Sub GetDepartmentsLue()
         Dim qry As String = "SELECT * FROM DepartmentTbl"
-        lueDepartment.Properties.DataSource = DBObj.dataget(qry, "get")
+        lueDepartment.Properties.DataSource = DBObj.GetData(qry)
         lueDepartment.Properties.DisplayMember = "Department"
         lueDepartment.Properties.ValueMember = "DepartmentId"
     End Sub
     Private Sub GetCurrencyLue()
         Dim qry As String = "SELECT * FROM CurrencyTbl"
-        lueCurrency.Properties.DataSource = DBObj.dataget(qry, "get")
+        lueCurrency.Properties.DataSource = DBObj.GetData(qry)
         lueCurrency.Properties.DisplayMember = "Currency"
         lueCurrency.Properties.ValueMember = "CurrencyId"
     End Sub
     Private Sub GetServiceTypesLue()
         Dim qry As String = "SELECT * FROM ServiceTypesTbl"
-        lueServiceType.Properties.DataSource = DBObj.dataget(qry, "get")
+        lueServiceType.Properties.DataSource = DBObj.GetData(qry)
         lueServiceType.Properties.DisplayMember = "Type"
         lueServiceType.Properties.ValueMember = "ServiceTypeId"
 
@@ -49,7 +47,7 @@ Public Class ServiceFrm
      VALUES ({serviceTypeId}, {currencyId}, {departmentId}, {servNum}, {description}, {amount}, {executor}, {client});"
 
 
-        Dim retNum As Integer = DBObj.saveway(SaveQry)
+        Dim retNum As Integer = DBObj.ExecuteNonQuery(SaveQry)
         If retNum > 0 Then
             MsgBox("Data Saved Successfully")
         End If

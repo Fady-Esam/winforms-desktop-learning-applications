@@ -75,10 +75,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmpFrm.cs">
+    <Compile Include="AddEmpProject\AddEmpFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmpFrm.designer.cs">
+    <Compile Include="AddEmpProject\AddEmpFrm.designer.cs">
+      <DependentUpon>AddEmpFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmp\AddEmpFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmp\AddEmpFrm.designer.cs">
       <DependentUpon>AddEmpFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddSuppliersFrm.cs">
@@ -87,11 +93,29 @@
     <Compile Include="AddSuppliersFrm.designer.cs">
       <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSupplier\AddSuppliersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupplier\AddSuppliersFrm.designer.cs">
+      <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BranchSaveBoxesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BranchSaveBoxesFrm.Designer.cs">
       <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchSaveBoxes\BranchSaveBoxesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchSaveBoxes\BranchSaveBoxesFrm.Designer.cs">
+      <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchStores\FrmBranchStores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchStores\FrmBranchStores.Designer.cs">
+      <DependentUpon>FrmBranchStores.cs</DependentUpon>
     </Compile>
     <Compile Include="branchsUsersFrm.cs">
       <SubType>Form</SubType>
@@ -99,6 +123,15 @@
     <Compile Include="branchsUsersFrm.Designer.cs">
       <DependentUpon>branchsUsersFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BranchUsers\branchsUsersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchUsers\branchsUsersFrm.Designer.cs">
+      <DependentUpon>branchsUsersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ClsArabicNumberConverter.cs" />
+    <Compile Include="Classes\ClsCheckNumber.cs" />
+    <Compile Include="Classes\DBClass.cs" />
     <Compile Include="ClsArabicNumberConverter.cs" />
     <Compile Include="ClsCheckNumber.cs" />
     <Compile Include="ContractRateFrm.cs">
@@ -107,16 +140,34 @@
     <Compile Include="ContractRateFrm.Designer.cs">
       <DependentUpon>ContractRateFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contract\ContractRateFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractRateFrm.Designer.cs">
+      <DependentUpon>ContractRateFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreatePenalty.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreatePenalty.Designer.cs">
       <DependentUpon>CreatePenalty.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreatePenalty\CreatePenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePenalty\CreatePenalty.Designer.cs">
+      <DependentUpon>CreatePenalty.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerGroupFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerGroupFrm.Designer.cs">
+      <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerGroup\CustomerGroupFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerGroup\CustomerGroupFrm.Designer.cs">
       <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomersFrm.cs">
@@ -131,6 +182,18 @@
     <Compile Include="CustomersInfoFrm.Designer.cs">
       <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomersInfo\CustomersInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersInfo\CustomersInfoFrm.Designer.cs">
+      <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\CustomersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomersFrm.Designer.cs">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomGroupFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,10 +207,22 @@
     <Compile Include="EarningsFrm.Designer.cs">
       <DependentUpon>EarningsFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Earnings\EarningsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Earnings\EarningsFrm.Designer.cs">
+      <DependentUpon>EarningsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeInfoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeInfoFrm.Designer.cs">
+      <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfo\EmployeeInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeInfo\EmployeeInfoFrm.Designer.cs">
       <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeesFrm.cs">
@@ -156,10 +231,22 @@
     <Compile Include="EmployeesFrm.Designer.cs">
       <DependentUpon>EmployeesFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees\EmployeesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\EmployeesFrm.Designer.cs">
+      <DependentUpon>EmployeesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBranchStores.cs">
@@ -172,6 +259,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneTypeFrm.Designer.cs">
+      <DependentUpon>GeneTypeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneType\GeneTypeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneType\GeneTypeFrm.Designer.cs">
       <DependentUpon>GeneTypeFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="GridDataFrm.cs">
@@ -632,17 +725,42 @@
     <Compile Include="DevExpreessLevel2\TT\Properties\AssemblyInfo.cs" />
     <Compile Include="DevExpreessLevel2\TT\Properties\Resources.Designer.cs" />
     <Compile Include="DevExpreessLevel2\TT\Properties\Settings.Designer.cs" />
+    <Compile Include="InvoiceGridProcessor\GridDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceGridProcessor\GridDataFrm.Designer.cs">
+      <DependentUpon>GridDataFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifiedSalesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModifiedSalesFrm.Designer.cs">
       <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifiedSales\ModifiedSalesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifiedSales\ModifiedSalesFrm.Designer.cs">
+      <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="OfferFrm2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OfferFrm2.Designer.cs">
       <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offers\OfferFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offers\OfferFrm2.Designer.cs">
+      <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PenaltyViewer\PenaltyWindowViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PenaltyViewer\PenaltyWindowViewer.Designer.cs">
+      <DependentUpon>PenaltyWindowViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="PenaltyWindowViewer.cs">
       <SubType>Form</SubType>
@@ -664,6 +782,18 @@
     <Compile Include="ReportFrm.Designer.cs">
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptModifiedSales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptModifiedSales.Designer.cs">
+      <DependentUpon>rptModifiedSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptModifiedSales.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -676,10 +806,22 @@
     <Compile Include="SalariesFrm.Designer.cs">
       <DependentUpon>SalariesFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Salaries\SalariesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salaries\SalariesFrm.Designer.cs">
+      <DependentUpon>SalariesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScheduleFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ScheduleFrm.Designer.cs">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule\ScheduleFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule\ScheduleFrm.Designer.cs">
       <DependentUpon>ScheduleFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="TaxesRules.cs">
@@ -688,10 +830,22 @@
     <Compile Include="TaxesRules.Designer.cs">
       <DependentUpon>TaxesRules.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaxesRules\TaxesRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxesRules\TaxesRules.Designer.cs">
+      <DependentUpon>TaxesRules.cs</DependentUpon>
+    </Compile>
     <Compile Include="VacationRules.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VacationRules.Designer.cs">
+      <DependentUpon>VacationRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationRules\VacationRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationRules\VacationRules.Designer.cs">
       <DependentUpon>VacationRules.cs</DependentUpon>
     </Compile>
     <Compile Include="VacationTypeFrm.cs">
@@ -700,10 +854,22 @@
     <Compile Include="VacationTypeFrm.Designer.cs">
       <DependentUpon>VacationTypeFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VacationType\VacationTypeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationType\VacationTypeFrm.Designer.cs">
+      <DependentUpon>VacationTypeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VacationViewer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VacationViewer.Designer.cs">
+      <DependentUpon>VacationViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationViewer\VacationViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacationViewer\VacationViewer.Designer.cs">
       <DependentUpon>VacationViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="ZoomFrm.cs">
@@ -712,25 +878,49 @@
     <Compile Include="ZoomFrm.Designer.cs">
       <DependentUpon>ZoomFrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEmpFrm.resx">
+    <EmbeddedResource Include="AddEmpProject\AddEmpFrm.resx">
+      <DependentUpon>AddEmpFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmp\AddEmpFrm.resx">
       <DependentUpon>AddEmpFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddSuppliersFrm.resx">
       <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplier\AddSuppliersFrm.resx">
+      <DependentUpon>AddSuppliersFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BranchSaveBoxesFrm.resx">
       <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BranchSaveBoxes\BranchSaveBoxesFrm.resx">
+      <DependentUpon>BranchSaveBoxesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchStores\FrmBranchStores.resx">
+      <DependentUpon>FrmBranchStores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="branchsUsersFrm.resx">
+      <DependentUpon>branchsUsersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchUsers\branchsUsersFrm.resx">
       <DependentUpon>branchsUsersFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContractRateFrm.resx">
       <DependentUpon>ContractRateFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractRateFrm.resx">
+      <DependentUpon>ContractRateFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreatePenalty.resx">
       <DependentUpon>CreatePenalty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreatePenalty\CreatePenalty.resx">
+      <DependentUpon>CreatePenalty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerGroupFrm.resx">
+      <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerGroup\CustomerGroupFrm.resx">
       <DependentUpon>CustomerGroupFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomersFrm.resx">
@@ -739,25 +929,46 @@
     <EmbeddedResource Include="CustomersInfoFrm.resx">
       <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomersInfo\CustomersInfoFrm.resx">
+      <DependentUpon>CustomersInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomersFrm.resx">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomGroupFrm.resx">
       <DependentUpon>CustomGroupFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EarningsFrm.resx">
       <DependentUpon>EarningsFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Earnings\EarningsFrm.resx">
+      <DependentUpon>EarningsFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeInfoFrm.resx">
+      <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInfo\EmployeeInfoFrm.resx">
       <DependentUpon>EmployeeInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesFrm.resx">
       <DependentUpon>EmployeesFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeesFrm.resx">
+      <DependentUpon>EmployeesFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBranchStores.resx">
       <DependentUpon>FrmBranchStores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneTypeFrm.resx">
+      <DependentUpon>GeneTypeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneType\GeneTypeFrm.resx">
       <DependentUpon>GeneTypeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GridDataFrm.resx">
@@ -973,11 +1184,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DevExpreessLevel2\testDev\Properties\Resources.resx" />
     <EmbeddedResource Include="DevExpreessLevel2\TT\Properties\Resources.resx" />
+    <EmbeddedResource Include="InvoiceGridProcessor\GridDataFrm.resx">
+      <DependentUpon>GridDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModifiedSalesFrm.resx">
+      <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifiedSales\ModifiedSalesFrm.resx">
       <DependentUpon>ModifiedSalesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OfferFrm2.resx">
       <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offers\OfferFrm2.resx">
+      <DependentUpon>OfferFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PenaltyViewer\PenaltyWindowViewer.resx">
+      <DependentUpon>PenaltyWindowViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PenaltyWindowViewer.resx">
       <DependentUpon>PenaltyWindowViewer.cs</DependentUpon>
@@ -998,30 +1221,69 @@
     <EmbeddedResource Include="ReportFrm.resx">
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptModifiedSales.resx">
+      <DependentUpon>rptModifiedSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptModifiedSales.resx">
       <DependentUpon>rptModifiedSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalariesFrm.resx">
       <DependentUpon>SalariesFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Salaries\SalariesFrm.resx">
+      <DependentUpon>SalariesFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScheduleFrm.resx">
+      <DependentUpon>ScheduleFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule\ScheduleFrm.resx">
       <DependentUpon>ScheduleFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaxesRules.resx">
       <DependentUpon>TaxesRules.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaxesRules\TaxesRules.resx">
+      <DependentUpon>TaxesRules.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VacationRules.resx">
+      <DependentUpon>VacationRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacationRules\VacationRules.resx">
       <DependentUpon>VacationRules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VacationTypeFrm.resx">
       <DependentUpon>VacationTypeFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VacationType\VacationTypeFrm.resx">
+      <DependentUpon>VacationTypeFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VacationViewer.resx">
       <DependentUpon>VacationViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VacationViewer\VacationViewer.resx">
+      <DependentUpon>VacationViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VBProject\newForm.resx" />
+    <EmbeddedResource Include="VBProject\ServiceFrm.resx" />
     <EmbeddedResource Include="ZoomFrm.resx">
       <DependentUpon>ZoomFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\CodeChunks.db" />
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\CodeChunks.db-shm" />
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\CodeChunks.db-wal" />
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\SemanticSymbols.db" />
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\SemanticSymbols.db-shm" />
+    <None Include=".vs\WFs\CopilotIndices\17.13.439.2385\SemanticSymbols.db-wal" />
+    <None Include=".vs\WFs\FileContentIndex\32e73158-efae-4d84-af43-b1dfa25f34d3.vsidx" />
+    <None Include=".vs\WFs\FileContentIndex\5dbef782-1f95-4e6a-ab58-5b7cc936fe0f.vsidx" />
+    <None Include=".vs\WFs\FileContentIndex\5fedb1d4-2b6d-4caf-bf77-71a2b6e4ead9.vsidx" />
+    <None Include=".vs\WFs\FileContentIndex\a138725a-6aca-45c8-b441-8a1200313d5e.vsidx" />
+    <None Include=".vs\WFs\FileContentIndex\c5699196-274f-487a-bd56-3a5bb1fce5f1.vsidx" />
+    <None Include=".vs\WFs\v17\.suo" />
+    <None Include=".vs\WFs\v17\fileList.bin" />
     <None Include="DevExpressLevel1\.vs\AddingItems\FileContentIndex\fe45f413-8392-4af5-b200-a831b09f1c8e.vsidx" />
     <None Include="DevExpressLevel1\.vs\AddingItems\v17\.suo" />
     <None Include="DevExpressLevel1\AddingItems\.vs\AddingItems\FileContentIndex\561f5991-1831-456a-87ca-c07544c1b684.vsidx" />
@@ -1855,8 +2117,15 @@
     <Content Include="DevExpreessLevel2\TaskProject\TaskProject.sln" />
     <Content Include="DevExpreessLevel2\testDev\testDev.sln" />
     <Content Include="DevExpreessLevel2\TT\TT.sln" />
+    <Content Include="VBProject\classess\DBHelper.vb" />
+    <Content Include="VBProject\newForm.Designer.vb" />
+    <Content Include="VBProject\newForm.vb" />
+    <Content Include="VBProject\ServiceFrm.Designer.vb" />
+    <Content Include="VBProject\ServiceFrm.vb" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
     <Folder Include="DevExpreessLevel2\Lesson1\bin\Debug\" />
     <Folder Include="DevExpreessLevel2\Lesson1\bin\Release\" />
     <Folder Include="DevExpreessLevel2\pro2\bin\Release\net8.0\" />
