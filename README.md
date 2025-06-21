@@ -27,6 +27,7 @@ Projects include database interaction, form design, event handling, grid views, 
 ## 🛠️ Languages & Tools
 <p align="left"> 
   <img src="https://skillicons.dev/icons?i=cs,dotnet" alt="Languages & Frameworks" />
+  <img src="https://github.com/user-attachments/assets/9a473be8-34be-434d-8749-e150524671cb" alt="VB" width="48" height="48"/>
   <img src="https://github.com/user-attachments/assets/3136feed-3e70-4e7c-8ea6-83fe0503adc1" alt="ADO .NET" width="48" height="48"/>
   <img src="https://github.com/user-attachments/assets/7c52a0af-9e04-4cb9-8a08-e492f9ea1ff1" alt="SQL Database" width="48" height="48"/>
   <img src="https://github.com/user-attachments/assets/92a8f8f5-b9cc-4ca4-88d8-b8ae33106ddb" alt="SQL Server" width="48" height="48"/>
