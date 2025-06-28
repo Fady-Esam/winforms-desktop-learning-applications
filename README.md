@@ -1,6 +1,6 @@
 # 🖥️ WinForms & DevExpress Desktop Practical Projects & Applications
 
-A collection of **Windows Forms** and **DevExpress** desktop applications developed while learning modern **C#** and **VB.NET** UI development and **Windows Desktop** principles.  
+A collection of **Windows Forms** and **DevExpress** desktop applications developed while learning modern **C#** and **VB.NET** UI development and **Windows Desktop Principles**.  
 Projects include database interaction, form design, event handling, and layered architecture using tools like **ADO.NET**, **SQL**, and **SQL Server**.
 
 ---
